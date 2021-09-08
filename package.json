@@ -1,0 +1,15 @@
+{
+  "name": "nodeJsAPI",
+  "version": "1.0.0",
+  "description": "API 開発プロジェクト",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "kenchan98hp@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
