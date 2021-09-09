@@ -1,17 +1,12 @@
+var Book = require('../models/book.model');
 exports.get_list = function (req, res) {
-    var data = [
-        { "id": 1, "name": "Book name 1" },
-        { "id": 1, "name": "Book name 1" },
-        { "id": 1, "name": "Book name 1" },
-        { "id": 1, "name": "Book name 1" },
-        { "id": 1, "name": "Book name 1" }
-    ];
-
-    res.send({ result: data });
+    Book.get_all(function (data) {
+        res.send({ result: data });
+    });
 }
 
 exports.detail = function (req, res) {
-    var data = { "id": req.params.id, "name": "Book name 1" };
-    
+    var data = Book.getById(req.params.id);
+
     res.send({ result: data });
 }
