@@ -5,5 +5,10 @@ module.exports = function (router) {
 
     router.get('/book/detail/:id', bookController.detail);
 
-    
+    router.post('/book/add', bookController.add_book);
+
+    router.delete('/book/delete/:id', bookController.remove_book);
+
+    router.put('/book/update', bookController.update_book);
+
 }

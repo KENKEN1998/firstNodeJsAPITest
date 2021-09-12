@@ -10,3 +10,25 @@ exports.detail = function (req, res) {
 
     res.send({ result: data });
 }
+
+//body-parser
+exports.add_book = function(req, res){
+    var data = req.body;
+    Book.create(data, function (respnse) {
+        res.send({ result: respnse });
+    });
+}
+
+exports.remove_book = function(req, res){
+    var id = req.params.id;
+    Book.remove(id, function (respnse) {
+        res.send({ result: respnse });
+    });
+}
+
+exports.update_book = function(req, res){
+    var data = req.body;
+    Book.update(data, function (respnse) {
+        res.send({ result: respnse });
+    });
+}
