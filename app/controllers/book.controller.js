@@ -6,10 +6,11 @@ exports.get_list = function (req, res) {
 }
 
 exports.detail = function (req, res) {
-    var data = Book.getById(req.params.id);
-
-    res.send({ result: data });
+    Book.getById(req.params.id, function (respnse) {
+        res.send({ result: respnse });
+    });
 }
+   
 
 //body-parser
 exports.add_book = function(req, res){
